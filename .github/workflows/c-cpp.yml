@@ -13,12 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Debug - List CPP files
-        run: find . -name "*.cpp"
-
       - name: Compile
-        working-directory: ./CPP
+        working-directory: "CPP/First-year student/Summer"
         run: g++ *.cpp -o main
 
       - name: Run
+        working-directory: "CPP/First-year student/Summer"
         run: ./main
